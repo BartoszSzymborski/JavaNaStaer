@@ -1,11 +1,11 @@
-package pl.javanastart.app;
+package pl.javastart;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import pl.javanastart.beans.MessagePrinter;
-import pl.javanastart.beans.MessageProducer;
+import pl.javastart.beans.NamesRepository;
 
+import java.util.List;
 
 @Configuration
 @ComponentScan
@@ -13,10 +13,9 @@ public class SpringDiApplication {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringDiApplication.class);
 
-        MessagePrinter bean1 = ctx.getBean(MessagePrinter.class);
-        bean1.printMessage();
-        MessagePrinter bean2 = ctx.getBean(MessagePrinter.class);
-        bean2.printMessage();
+        NamesRepository namesRepository = ctx.getBean(NamesRepository.class);
+        List<String>allNames = namesRepository.getAll();
+        allNames.forEach(System.out::println);
 
         ctx.close();
     }
