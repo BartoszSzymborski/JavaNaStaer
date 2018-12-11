@@ -1,6 +1,6 @@
 # JavaNaStart 
 In this project I focuesd on learning by my own, according to webiste https://javastart.pl/
-I decided to focued on such moduls:
+I decided to focused on such moduls:
 - Java podstawy, where I can learn:
   1) Enum types
   2) Recursion
