@@ -1,5 +1,5 @@
 # JavaNaStart 
-In this project I focuesd on learning by my own, according to webiste www.javanastart.pl
+In this project I focuesd on learning by my own, according to webiste https://javastart.pl/
 I decided to focued on such moduls:
 - Java podstawy, where I can learn:
   1) Enum types
