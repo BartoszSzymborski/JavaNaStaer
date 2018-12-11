@@ -14,4 +14,6 @@ I decided to focused on such moduls:
     4) Spring Security
     5) Spring Data Rest
     6) AngularJS
+    
+    
   I hope those lessons will help me to develop my skills as programmer
