@@ -1,0 +1,15 @@
+<html ng-app="app">
+    <head>
+        <title>Angular Controllers</title>
+    </head>
+    
+    <body>
+        <div ng-controller="HelloController as hello">
+            <h1>To proste jak {{ 2+2 }}</h1>
+            <input type="text" ng-model="hello.exampleVariable">
+            <p>{{hello.exampleVariable}}</p>
+        </div>
+        <script src="js/lib/angular/angular.js" type="application/javascript"></script>
+        <script src="js/app/app.js" type="application/javascript"></script>
+    </body>
+</html>

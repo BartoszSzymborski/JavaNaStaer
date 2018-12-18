@@ -1,0 +1,17 @@
+<html ng-app="app5">
+    <head>
+        <title>Angular Events</title>
+    </head>
+    <body>
+    <div ng-controller="HrefController as ctrl">
+        <a ng-href="https://www.youtube.com/watch?v={{ctrl.movies[0]}}">Java Rap</a>
+        <br />
+        <a ng-href="https://www.youtube.com/watch?v={{ctrl.movies[1]}}">Java is what Java does</a>
+        <br />
+        <img ng-src="{{ctrl.imgSrc}}">
+    </div>
+    <script src="js/lib/angular/angular.js" type="application/javascript"></script>
+        <script src="js/app/app5.js" type="application/javascript"></script>
+    </body>
+</html>
+

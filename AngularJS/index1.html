@@ -1,0 +1,15 @@
+<html ng-app="app1">
+    <head>
+        <h1>Angular Events</h1>
+    </head>
+    
+    <body>
+        <div ng-controller="ClickController as clickControl">
+            <input type="text" ng-model="clickControl.textInput">
+            <button ng-click="clickControl.changeHeader()">Change Header</button>
+            <h1 ng-dblclick="clickControl.headerClick()">{{clickControl.header}}</h1>
+        </div>
+        <script src="js/lib/angular/angular.js" type="application/javascript"></script>
+        <script src="js/app/app.js" type="application/javascript"></script>
+    </body>
+</html>

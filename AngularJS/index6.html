@@ -1,0 +1,50 @@
+<html ng-app="app6">
+    <head>
+        <title>Angular Directives</title>
+        <style>
+            .parzyste {
+                color: red;
+            }
+            .nieparzyste {
+                color: blue;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div ng-controller="RepeatController as ctrl">
+            <h1 ng-style="ctrl.h1style">All names:</h1>
+            <button ng-click="ctrl.changeH1Style()">Change H1 style</button>
+            <ul>
+                <li ng-repeat="p in ctrl.people">{{p.firstName}} : {{p.lastName}}</li>
+            </ul>
+        </div>        
+        <div ng-controller="RepeatController as ctrl">
+            <h1>All names:</h1>
+            <ul>
+                <li ng-repeat="p in ctrl.people"
+                    ng-class-even="'parzyste'"
+                    ng-class-odd="'nieparzyste'">{{p.firstName}} : {{p.lastName}}</li>
+            </ul>
+            <table border="1">
+                <thead >
+                    <tr>
+                        <th>First name</th>
+                        <th>Last Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="p in ctrl.people" 
+                        ng-class-even="ctrl.even"
+                        ng-class-odd="ctrl.odd">
+                        <td>{{p.firstName}}</td>
+                        <td>{{p.lastName}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+            
+        <script src="js/lib/angular/angular.js" type="application/javascript"></script>
+        <script src="js/app/app.js" type="application/javascript"></script>
+    </body>
+</html>

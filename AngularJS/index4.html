@@ -1,0 +1,14 @@
+<html ng-app="app4">
+    <head>
+        <title>Angular Events</title>
+    </head>
+    
+    <body>
+        <div ng-controller="ChangeController as change">
+            <input type="checkbox" ng-model="change.checkbox" ng-change="change.changeState()">
+            <h1>{{change.header}}</h1>
+        </div>
+        <script src="js/lib/angular/angular.js" type="application/javascript"></script>
+        <script src="js/app/app4.js" type="application/javascript"></script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<html ng-app="app3">
+    <head>
+        <title>Angular Events</title>
+    </head>
+    <body>
+        <div ng-controller="KeyController as keyControl">
+            <input type="text" ng-keydown="keyControl.keyDown()"
+                   ng-keyup="keyControl.keyUp()"
+                   ng-keypress="keyControl.keyPress()"
+                   placerholder="input">
+            
+            <h1>Key Down: {{keyControl.down}}</h1>
+            <h1>Key Up: {{keyControl.up}}</h1>
+            <h1>Key Press: {{keyControl.press}}</h1>
+        </div>
+        <script src="js/lib/angular/angular.js" type="application/javascript"></script>
+        <script src="js/app/app3.js" type="application/javascript"></script>
+    </body>
+</html>
