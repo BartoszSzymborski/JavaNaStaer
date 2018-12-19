@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html data-ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Add new Book</h1>
+<form>
+    <input type="text" placeholder="Title" ng-model="newCtrl.book.title"><br/>
+    <input type="text" placeholder="Author" ng-model="newCtrl.book.author"><br/>
+    <input type="text" placeholder="ISBN" ng-model="newCtrl.book.isbn"><btr/>
+    <button ng-click="newCtrl.saveBook()">Add new book</button>
+
+</form>
+</body>
+</html>
