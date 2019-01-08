@@ -13,6 +13,7 @@
         <div class="container text-center text-white jumbo-container">
             <h1 class="display-3">Foodie</h1>
             <p>Witaj w naszej restauracji. Zamawiaj co chcesz i ile chcesz, a my przygotujemy to dla Ciebie.</p>
+            <a href="@{/zamowienie}">Zamówienie</a>
         </div>
     </div>
     <div th:remove="all-but-first">
@@ -23,6 +24,7 @@
                     <h5 th:text="|${item.name}(${item.price}zł)|">Pizza Margherita (25zł)</h5>
                 </a>
                 <p th:text="${item.shortDescription}">Krótki opis pizzy margherita, pysznej klasyki na cienkim cieście i rozpływającym się serem.</p>
+                <a href="#" th:href="@{/zamowienie/dodaj(itemId=${item.id})}" class="btn btn-sm btn primary">Dodaj do zamówienia</a>
             </div>
         </div>
         <div class="media col-6 offset-3">
