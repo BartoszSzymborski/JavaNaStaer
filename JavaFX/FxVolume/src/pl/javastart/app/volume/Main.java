@@ -1,4 +1,4 @@
-package pl.javastart.fx.main;
+package pl.javastart.app.volume;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,8 +10,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent parent = (Parent) FXMLLoader.load(getClass().getResource("/pl/javastart/fx/view/MainPane.fxml"));
-        Scene scene = new Scene(parent);
+        Parent root = FXMLLoader.load(getClass().getResource("/pl/javastart/app/volume/VolumePane.fxml"));
+        Scene scene = new Scene(root);
         primaryStage.setTitle("Okno");
         primaryStage.setScene(scene);
         primaryStage.show();

@@ -1,4 +1,4 @@
-package pl.javastart.fx.main;
+package pl.javastart.fxe.main;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,14 +9,13 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent parent = (Parent) FXMLLoader.load(getClass().getResource("/pl/javastart/fx/view/MainPane.fxml"));
+    public void start(Stage stage) throws Exception {
+        Parent parent = (Parent)FXMLLoader.load(getClass().getResource("/pl/javastart/fxe/view/ContentPane.fxml"));
         Scene scene = new Scene(parent);
-        primaryStage.setTitle("Okno");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        stage.setScene(scene);
+        stage.setTitle("Text Converter");
+        stage.show();
     }
-
 
     public static void main(String[] args) {
         launch(args);
