@@ -11,7 +11,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        final String appName = "Mp3Player v0.3";
+        final String appName = "Mp3Player v0.8";
         try {
             Parent parent = (Parent) FXMLLoader.load(getClass().getResource(
                     "/pl/javastart/mp3player/view/MainPane.fxml"
