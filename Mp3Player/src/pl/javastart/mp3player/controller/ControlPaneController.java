@@ -29,39 +29,29 @@ public class ControlPaneController implements Initializable {
     @FXML
     private Slider songSlider;
 
+
+    public Button getPrevButton() {
+        return prevButton;
+    }
+
+    public ToggleButton getPlayButton() {
+        return playButton;
+    }
+
+    public Button getNextButton() {
+        return nextButton;
+    }
+
+    public Slider getVolumeSlider() {
+        return volumeSlider;
+    }
+
+    public Slider getSongSlider() {
+        return songSlider;
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        configureButtons();
-        configureSliders();
     }
 
-    private void configureSliders(){
-        volumeSlider.valueProperty().addListener(new ChangeListener<Number>() {
-            @Override
-            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                System.out.println("Zmiana głośności " + newValue.doubleValue());
-            }
-        });
-        songSlider.valueProperty().addListener(x-> System.out.println("Przesunięcie piosenki"));
-    }
-
-    private void configureButtons(){
-        prevButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Poprzednia piosenka");
-            }
-        });
-        nextButton.setOnAction(x-> System.out.println("Następna piosenka"));
-        playButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                if (playButton.isSelected()){
-                    System.out.println("Play");
-                }else {
-                    System.out.println("Stop");
-                }
-            }
-        });
-    }
 }
